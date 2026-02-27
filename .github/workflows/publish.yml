@@ -1,0 +1,22 @@
+name: Publish to crates.io
+on:
+  push:
+    tags: ['v*'] # Si attiva quando fai il push di una tag come v1.0.1
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Fondamentale per il Trusted Publishing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rust-lang/setup-rust-toolchain@v1
+      
+      # Genera il token temporaneo sicuro
+      - uses: rust-lang/crates-io-auth-action@v1
+        id: auth
+        
+      - name: Publish to crates.io
+        run: cargo publish
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
