@@ -61,9 +61,6 @@ unit tests for realistic compositions.
 
 Project documentation lives in [`docs/`](./docs/README.md).
 
-    ```markdown
-     ![CI](https://github.com/<tuo-utente>/os_kernel_foundry/actions/workflows/ci.yml/badge.svg)
-     ```
 
 ## License
 
