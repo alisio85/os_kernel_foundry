@@ -1,6 +1,6 @@
 [package]
 name = "os_kernel_foundry"
-version = "0.1.3"
+version = "0.1.4"
 # Rust language edition (not the year of the project).
 edition = "2024"
 description = "A modular, heavily test-driven foundation crate for building Rust-based operating systems in Rust."

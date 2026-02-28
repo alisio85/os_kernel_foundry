@@ -6,6 +6,7 @@ This crate is a modular, test-driven foundation for building Rust-based operatin
 
 ## Contents
 
+- [Manual (detailed)](./manual.md)
 - [Quickstart](./quickstart.md)
 - [Architecture & design principles](./architecture.md)
 - [Module reference](./modules.md)
