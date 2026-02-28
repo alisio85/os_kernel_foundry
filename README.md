@@ -57,6 +57,10 @@ unit tests for realistic compositions.
 6. Optionally, build your own scheduler on top of the `scheduler` module
    and layer IPC on top of the `ipc` traits.
 
+## Documentation
+
+Project documentation lives in [`docs/`](./docs/README.md).
+
     ```markdown
      ![CI](https://github.com/<tuo-utente>/os_kernel_foundry/actions/workflows/ci.yml/badge.svg)
      ```

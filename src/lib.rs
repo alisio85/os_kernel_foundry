@@ -30,8 +30,8 @@
 pub mod arch;
 pub mod boot;
 pub mod device;
+pub mod ipc;
 pub mod kernel;
 pub mod memory;
-pub mod sync;
 pub mod scheduler;
-pub mod ipc;
+pub mod sync;

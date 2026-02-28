@@ -85,9 +85,18 @@ mod tests {
     fn fixed_channel_sends_and_receives() {
         let mut chan: FixedChannel<2> = FixedChannel::new();
 
-        assert!(chan.send(TestMessage { kind: "ping", payload: 1 }));
-        assert!(chan.send(TestMessage { kind: "ping", payload: 2 }));
-        assert!(!chan.send(TestMessage { kind: "ping", payload: 3 }));
+        assert!(chan.send(TestMessage {
+            kind: "ping",
+            payload: 1,
+        }));
+        assert!(chan.send(TestMessage {
+            kind: "ping",
+            payload: 2,
+        }));
+        assert!(!chan.send(TestMessage {
+            kind: "ping",
+            payload: 3,
+        }));
 
         assert_eq!(
             chan.recv(),
@@ -106,4 +115,3 @@ mod tests {
         assert!(chan.recv().is_none());
     }
 }
-

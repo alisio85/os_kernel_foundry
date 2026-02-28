@@ -91,4 +91,3 @@ mod tests {
         assert_eq!(*guard, 1);
     }
 }
-

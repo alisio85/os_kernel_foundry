@@ -6,7 +6,7 @@
 //! testable skeleton that can be extended for real-world systems.
 
 use crate::arch::Architecture;
-use crate::boot::{run_boot_sequence, BootError, BootStage, BootState};
+use crate::boot::{BootError, BootStage, BootState, run_boot_sequence};
 use crate::device::DeviceRegistry;
 
 /// Represents the high-level kernel, parameterised over an architecture.
@@ -31,10 +31,7 @@ impl<A: Architecture> Kernel<A> {
     }
 
     /// Runs the boot sequence using the provided stages.
-    pub fn boot(
-        &mut self,
-        stages: &[&dyn BootStage<A>],
-    ) -> Result<BootState, BootError> {
+    pub fn boot(&mut self, stages: &[&dyn BootStage<A>]) -> Result<BootState, BootError> {
         run_boot_sequence(&mut self.arch, stages)
     }
 
@@ -131,7 +128,8 @@ mod tests {
         let mut registry = DeviceRegistry::new(&mut storage);
         assert!(registry.register(&mut device));
 
-        kernel.init_devices(&mut registry).expect("devices should init");
+        kernel
+            .init_devices(&mut registry)
+            .expect("devices should init");
     }
 }
-

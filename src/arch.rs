@@ -166,4 +166,3 @@ impl AddressTranslator for MockAddressTranslator {
         self.mappings.get(&virtual_address).copied()
     }
 }
-

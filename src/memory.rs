@@ -76,7 +76,11 @@ mod tests {
     }
 
     impl VirtualMemoryManager for TestVirtualMemory {
-        unsafe fn map(&mut self, virtual_address: usize, physical_address: usize) -> Result<(), ()> {
+        unsafe fn map(
+            &mut self,
+            virtual_address: usize,
+            physical_address: usize,
+        ) -> Result<(), ()> {
             self.mappings.insert(virtual_address, physical_address);
             Ok(())
         }
@@ -96,4 +100,3 @@ mod tests {
         unsafe { vm.map(0x1000, frame).expect("map") };
     }
 }
-

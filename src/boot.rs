@@ -101,7 +101,9 @@ pub fn run_boot_sequence<A: Architecture>(
         });
 
         stage.run(&mut ctx).map_err(|err| {
-            ctx.set_state(BootState::Failed { failed_stage: index });
+            ctx.set_state(BootState::Failed {
+                failed_stage: index,
+            });
             err
         })?;
     }
@@ -116,7 +118,9 @@ pub fn run_boot_sequence<A: Architecture>(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::arch::{Architecture, MockAddressTranslator, MockInterruptController, MockTimer, Timer};
+    use crate::arch::{
+        Architecture, MockAddressTranslator, MockInterruptController, MockTimer, Timer,
+    };
 
     #[derive(Debug)]
     struct TestArch {
@@ -208,4 +212,3 @@ mod tests {
         assert!(result.is_err());
     }
 }
-
