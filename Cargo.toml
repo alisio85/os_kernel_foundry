@@ -1,6 +1,6 @@
 [package]
 name = "os_kernel_foundry"
-version = "0.1.2"
+version = "0.1.3"
 # Rust language edition (not the year of the project).
 edition = "2024"
 description = "A modular, heavily test-driven foundation crate for building Rust-based operating systems in Rust."
@@ -10,7 +10,7 @@ keywords = ["os", "kernel", "no_std", "operating-system", "testing"]
 categories = ["os", "embedded", "development-tools"]
 homepage = "https://github.com/alisio85/os_kernel_foundry"
 repository = "https://github.com/alisio85/os_kernel_foundry.git"
-documentation = "https://github.com/alisio85/os_kernel_foundry/docs"
+documentation = "https://github.com/alisio85/os_kernel_foundry/tree/main/docs"
 
 [dependencies]
 
