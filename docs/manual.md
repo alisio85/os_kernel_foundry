@@ -64,7 +64,7 @@ os_kernel_foundry = { path = "../os_kernel_foundry" }
 
 ```toml
 [dependencies]
-os_kernel_foundry = "0.1"
+os_kernel_foundry = "0.1.4"
 ```
 
 ### 2.2 Features
